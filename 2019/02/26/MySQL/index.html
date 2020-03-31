@@ -96,21 +96,25 @@
 
 
 
-  <meta property="og:type" content="article">
-<meta property="og:title" content="Chen">
-<meta property="og:url" content="https://chen934298133.github.io/2020/03/31/MySQL/index.html">
+  <meta name="description" content="新增数据库  ‘’’ create database 数据库名字 [库选项]； 库选项：用来约束数据库，分为字符集设定charset、校对集设定collation注：常用字符集为GBK、utf8 ‘’’create database mydatabase charset utf8; 创建中文名的database： ‘’’set names gbkcreate database 我的数据库 char">
+<meta name="keywords" content="笔记">
+<meta property="og:type" content="article">
+<meta property="og:title" content="MySQL">
+<meta property="og:url" content="https://chen934298133.github.io/2019/02/26/MySQL/index.html">
 <meta property="og:site_name" content="Chen">
+<meta property="og:description" content="新增数据库  ‘’’ create database 数据库名字 [库选项]； 库选项：用来约束数据库，分为字符集设定charset、校对集设定collation注：常用字符集为GBK、utf8 ‘’’create database mydatabase charset utf8; 创建中文名的database： ‘’’set names gbkcreate database 我的数据库 char">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2020-03-31T05:44:48.824Z">
+<meta property="og:updated_time" content="2020-03-31T06:13:02.340Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Chen">
+<meta name="twitter:title" content="MySQL">
+<meta name="twitter:description" content="新增数据库  ‘’’ create database 数据库名字 [库选项]； 库选项：用来约束数据库，分为字符集设定charset、校对集设定collation注：常用字符集为GBK、utf8 ‘’’create database mydatabase charset utf8; 创建中文名的database： ‘’’set names gbkcreate database 我的数据库 char">
 
 
 
 
 
 
-  <link rel="canonical" href="https://chen934298133.github.io/2020/03/31/MySQL/">
+  <link rel="canonical" href="https://chen934298133.github.io/2019/02/26/MySQL/">
 
 
 
@@ -120,7 +124,7 @@
   };
 </script>
 
-  <title> | Chen</title>
+  <title>MySQL | Chen</title>
   
 
 
@@ -319,7 +323,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://chen934298133.github.io/2020/03/31/MySQL/">
+    <link itemprop="mainEntityOfPage" href="https://chen934298133.github.io/2019/02/26/MySQL/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="chenchen">
@@ -336,7 +340,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
+          <h1 class="post-title" itemprop="name headline">MySQL
 
               
             
@@ -367,12 +371,46 @@
                 
               
 
-              <time title="Created: 2020-03-31 13:44:48" itemprop="dateCreated datePublished" datetime="2020-03-31T13:44:48+08:00">2020-03-31</time>
+              <time title="Created: 2019-02-26 10:52:43" itemprop="dateCreated datePublished" datetime="2019-02-26T10:52:43+08:00">2019-02-26</time>
             
 
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2020-03-31 14:13:02" itemprop="dateModified" datetime="2020-03-31T14:13:02+08:00">2020-03-31</time>
+              
             
           </span>
 
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/课程/" itemprop="url" rel="index"><span itemprop="name">课程</span></a></span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -408,7 +446,22 @@
       
 
       
-        
+        <h5>新增数据库</h5>
+
+<p>‘’’ create database 数据库名字 [库选项]；</p>
+<p>库选项：用来约束数据库，分为字符集设定charset、校对集设定collation<br>注：常用字符集为GBK、utf8</p>
+<p>‘’’create database mydatabase charset utf8;</p>
+<p>创建中文名的database：</p>
+<p>‘’’<br>set names gbk<br>create database 我的数据库 charset utf8;<br>‘’’</p>
+<p>查看所有数据库：<br>‘’’show databases;</p>
+<p>查看指定部分的数据库，即模糊查询<br>‘’’show databases like ‘pattern’;</p>
+<p>更新、修改数据库：<br>–数据库名字不可以修改<br>–数据库仅允许修改：字符集charset和校对集collation<br>‘’’alter database 数据库的名字 charset GBK;</p>
+<p>删除数据库：<br>‘’’drop database 数据库名字<br>注意：删除不可逆</p>
+<p>新增数据表：<br>‘’’create table if not exists 表名(字段名字 数据类型，字段名字 数据类型)[表选项]；’’’<br>‘’’<br>create table if not exists mydatabase.student(<br>name varchar(10),<br>gender varchar(10),<br>number varchar(10),<br>age int<br>)<br>charset utf8;<br>‘’’</p>
+<p>查看所有表：</p>
+<p>‘’’show tables ‘’’</p>
+<p>查看表结构：查看表中的字段信息<br>‘’’desc columns from 表名<br>或者：<br>describe columns from 表名<br>或者：<br>show columns from 表名’’’</p>
+
       
     </div>
 
@@ -466,6 +519,12 @@
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/笔记/" rel="tag"># 笔记</a>
+          
+        </div>
+      
 
       
       
@@ -475,8 +534,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2020/03/25/小程序/" rel="next" title="小程序">
-                <i class="fa fa-chevron-left"></i> 小程序
+              <a href="/2019/02/21/EXCEL-VBA/" rel="next" title="EXCEL VBA">
+                <i class="fa fa-chevron-left"></i> EXCEL VBA
               </a>
             
           </div>
@@ -484,6 +543,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/02/26/网络工程/" rel="prev" title="网络工程">
+                网络工程 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -533,8 +596,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
             
@@ -663,6 +735,23 @@
         </div>
       </div>
 
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#undefined"><span class="nav-number">1.</span> <span class="nav-text">新增数据库</span></a></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
       
 
       
@@ -856,7 +945,7 @@ setInterval("createtime()",250);
   
     <script>
       window.livereOptions = {
-        refer: '2020/03/31/MySQL/'
+        refer: '2019/02/26/MySQL/'
       };
       (function(d, s) {
         var j, e = d.getElementsByTagName(s)[0];
