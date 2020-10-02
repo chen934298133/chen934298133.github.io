@@ -104,7 +104,7 @@
 <meta property="og:site_name" content="Chen">
 <meta property="og:description" content="新增数据库  ‘’’ create database 数据库名字 [库选项]； 库选项：用来约束数据库，分为字符集设定charset、校对集设定collation注：常用字符集为GBK、utf8 ‘’’create database mydatabase charset utf8; 创建中文名的database： ‘’’set names gbkcreate database 我的数据库 char">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2020-03-31T06:13:02.340Z">
+<meta property="og:updated_time" content="2020-03-31T06:58:52.403Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="MySQL">
 <meta name="twitter:description" content="新增数据库  ‘’’ create database 数据库名字 [库选项]； 库选项：用来约束数据库，分为字符集设定charset、校对集设定collation注：常用字符集为GBK、utf8 ‘’’create database mydatabase charset utf8; 创建中文名的database： ‘’’set names gbkcreate database 我的数据库 char">
@@ -388,7 +388,7 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2020-03-31 14:13:02" itemprop="dateModified" datetime="2020-03-31T14:13:02+08:00">2020-03-31</time>
+                <time title="Modified: 2020-03-31 14:58:52" itemprop="dateModified" datetime="2020-03-31T14:58:52+08:00">2020-03-31</time>
               
             
           </span>
@@ -461,6 +461,50 @@
 <p>查看所有表：</p>
 <p>‘’’show tables ‘’’</p>
 <p>查看表结构：查看表中的字段信息<br>‘’’desc columns from 表名<br>或者：<br>describe columns from 表名<br>或者：<br>show columns from 表名’’’</p>
+<ul>
+<li><p>修改数据表</p>
+<ul>
+<li>修改表本身：表名、表选项(charset collation)</li>
+<li>‘’’修改表名：<br>rename table 老表名 to 新表名<br>修改表选项：<br>alter table my_student charset utf8’’’</li>
+</ul>
+</li>
+<li><p>删除数据表</p>
+<ul>
+<li>‘’’drop table 表名;’’’</li>
+</ul>
+</li>
+<li><p>4.3数据操作</p>
+<ul>
+<li>A.新增数据：insert<ul>
+<li>场景1：给table中的所有字段都插入数据：无需指定字段所属的列，但要求数据的顺序必须与表中字段列的顺序一致</li>
+<li>‘’’insert into 表名 values (1列的值，2列的值，3列的值，……)；’’’</li>
+<li>场景2：只在部分字段中插入数据，则需要选定字段列表：</li>
+<li>‘’’insert into 表名 字段列表 values （值列表1),(值列表2)，……；</li>
+<li>insert into my_student(number, sex, name, id) values(“itcast001”，“male”，“Tom”，“3”，),(“itcast002”，“female”，“Mary”，“15”，)’’’</li>
+</ul>
+</li>
+<li>查看数据<ul>
+<li>‘’’查看表中全部数据：</li>
+<li>select * from 表名</li>
+<li>按条件查看数据：</li>
+<li>select 筛选列名 from 表名 where 筛选条件；</li>
+<li>select id,number,sex from my_student where id=1；</li>
+</ul>
+</li>
+<li>更新数据<ul>
+<li>update 表名 set 字段 = 值 [where 筛选条件]</li>
+<li>#这里不加table</li>
+</ul>
+</li>
+<li>删除数据 <ul>
+<li>delete from 表名 where 筛选条件</li>
+<li>#这里不加table</li>
+</ul>
+</li>
+<li></li>
+</ul>
+</li>
+</ul>
 
       
     </div>
@@ -623,7 +667,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">10</span>
+                    <span class="site-state-item-count">11</span>
                     <span class="site-state-item-name">posts</span>
                   </a>
                 </div>
