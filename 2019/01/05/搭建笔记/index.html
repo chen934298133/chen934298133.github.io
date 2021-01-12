@@ -104,7 +104,7 @@
 <meta property="og:site_name" content="Chen">
 <meta property="og:description" content="#新建博文在post文件夹内： hexo new “name” 部署上传：  hexo g -d 本地预览hexo s -p 5555(端口号) 设置头像在D:\Hexo\Hexo\themes\next\source\images 中加入图片在D:\Hexo\Hexo\themes\next中更改配置avatar:url:后面加 /images/touxiang.jpg 添加头像在D:\Hexo">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2021-01-08T13:05:43.286Z">
+<meta property="og:updated_time" content="2021-01-11T06:30:09.314Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="third">
 <meta name="twitter:description" content="#新建博文在post文件夹内： hexo new “name” 部署上传：  hexo g -d 本地预览hexo s -p 5555(端口号) 设置头像在D:\Hexo\Hexo\themes\next\source\images 中加入图片在D:\Hexo\Hexo\themes\next中更改配置avatar:url:后面加 /images/touxiang.jpg 添加头像在D:\Hexo">
@@ -388,7 +388,7 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2021-01-08 21:05:43" itemprop="dateModified" datetime="2021-01-08T21:05:43+08:00">2021-01-08</time>
+                <time title="Modified: 2021-01-11 14:30:09" itemprop="dateModified" datetime="2021-01-11T14:30:09+08:00">2021-01-11</time>
               
             
           </span>
@@ -473,6 +473,9 @@
 <p>添加音乐<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">1.leancloud 注册账户</span><br><span class="line">2.创建应用</span><br><span class="line">3.到创建的应用李上传即可</span><br><span class="line"></span><br><span class="line">4.安装aplayer</span><br><span class="line">到hexo文件夹中git here</span><br><span class="line">	user@DESKTOP-LDOS6EQ MINGW64 /d/Hexo/Hexo</span><br><span class="line">	$ npm install --save hexo-tag-aplayer</span><br><span class="line">	$ npm audit fix</span><br><span class="line">	$ npm audit fix --force</span><br><span class="line">5.实例</span><br><span class="line">	&#123;% aplayer &quot;方圆几里&quot; &quot;薛之谦&quot; &quot;http://lc-ddwi9s44.cn-n1.lcfile.com/3fc17661c86ee7608de4.mp3&quot; &quot;http://lc-ddwi9s44.cn-n1.lcfile.com/3bf889452425b489fee7.jpg&quot; &quot;autoplay&quot; %&#125;</span><br></pre></td></tr></table></figure></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">/* 计时功能 */</span><br><span class="line">具体步骤</span><br><span class="line"></span><br><span class="line">– 1，打开 next/layout/_partials文件夹下的 footer.swing文件</span><br><span class="line"></span><br><span class="line">– 2，添加时间记录函数</span><br><span class="line"></span><br><span class="line">window.onload = function() &#123;</span><br><span class="line">var show = document.getElementById(&quot;show&quot;);</span><br><span class="line">setInterval(function() &#123;</span><br><span class="line">var time = new Date();</span><br><span class="line">// 程序计时的月从0开始取值后+1</span><br><span class="line">var m = time.getMonth() + 1;</span><br><span class="line">//根据自己博客的创建时间更改数值</span><br><span class="line">var t = &quot;提示内容&quot;+(time.getFullYear()-2017) + &quot;年&quot; + (m-3) + &quot;月&quot;</span><br><span class="line">+ time.getDate() + &quot;天 &quot; + time.getHours() + &quot;时&quot;</span><br><span class="line">+ time.getMinutes() + &quot;分&quot; + time.getSeconds() + &quot;秒&quot;;</span><br><span class="line">show.innerHTML = t;</span><br><span class="line">&#125;, 1000);</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">– 3，将show函数放在自己喜欢的位置即可。</span><br></pre></td></tr></table></figure>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">折叠功能</span><br><span class="line">&lt;details&gt;</span><br><span class="line">&lt;summary&gt;展开&lt;/summary&gt;</span><br><span class="line">&gt; client </span><br><span class="line">&lt;/details&gt;</span><br></pre></td></tr></table></figure>
+<details><br><summary>&#127808; 查看代码 &#127808;</summary><br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure><br><br></details>
+
+
       
     </div>
 
